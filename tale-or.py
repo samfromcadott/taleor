@@ -1,8 +1,14 @@
-#Copyright 2013 Sam Jackson
+# Copyright 2013 Sam Jackson
+
+
+world_mode = 'realative' # Could also be 'absolute' or 'semi-absolute'
+tense = 'presant' # Could also be 'past' or 'future'
+person = 2 # If it is 1 messages will be in first person, if it is 3 they will be third
 
 class actor:
 
     name = "Generic Actor"
+    alt_name = [None]
     player = False
     description = "This actor is generic"
     gender = "none" # Can also be "male", "female", or "neuter"
@@ -16,13 +22,14 @@ class actor:
 class room:
 
     name = "Generic Room"
+    alt_name = [None]
     description = "This room is generic"
-    contains = [None] #The things/actors/rooms in the room
+    contains = [None] # The things/actors/rooms in the room
     location = {
-                'x' : 0, #This is only used in absolute mode. It represents the room's location in the world.
+                'x' : 0, # This is only used in absolute mode. It represents the room's location in the world.
                 'y' : 0,
                }
-    exits = {
+    exits = { # These are only used in realative and semi-absolute mode
              'north' = None,
              'south' = None,
              'east' = None,
@@ -48,8 +55,20 @@ class room:
 class thing:
 
     name = "Generic Thing"
+    alt_name = [None]
     description = "This thing is generic"
+    numeration = 1 # If this is 1 it will be simgular, if it is 0 it will not have enumeration, if it is anything else it will be plural
     container = False
     wearable = False
     carriable = True
-    
+    eadable = False
+    sceanery = False
+    weildable = False
+    contains = [None]
+
+def runGame():
+    pass
+
+def roomDescription():
+
+    return "", player.location['room'].name, "\n\n", player.location['room'].description, "\n\n", "You see", player.location['room'].contains, "." 
