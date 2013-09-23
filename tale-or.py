@@ -2,9 +2,32 @@
 
 
 world_mode = 'realative' # Could also be 'absolute' or 'semi-absolute'
-tense = 'presant' # Could also be 'past' or 'future'
-person = 2 # If it is 1 messages will be in first person, if it is 3 they will be third
+tense = 'present' # Could also be 'past' or 'future'
+person = 'second' # Can also be 
 
+tense_forms = { # Contains forms for tense and perspective for messages.
+
+               'first' : {
+                          'subject' : 'I',
+                          'past' : 'saw',
+                          'present' : 'see',
+                          'future' : 'will see',
+                         },
+
+               'second' : {
+                           'subject' : 'You',
+                           'past' : 'saw',
+                           'present' : 'see',
+                           'future' : 'will see',
+                          },
+
+               'third' : {
+                          'subject' : player.name,
+                          'past' : 'saw',
+                          'present' : 'sees',
+                          'future' : 'will see',
+                         }
+              }
 
 class actor:
 
