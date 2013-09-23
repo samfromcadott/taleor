@@ -5,6 +5,7 @@ world_mode = 'realative' # Could also be 'absolute' or 'semi-absolute'
 tense = 'presant' # Could also be 'past' or 'future'
 person = 2 # If it is 1 messages will be in first person, if it is 3 they will be third
 
+
 class actor:
 
     name = "Generic Actor"
@@ -30,26 +31,26 @@ class room:
                 'y' : 0,
                }
     exits = { # These are only used in realative and semi-absolute mode
-             'north' = None,
-             'south' = None,
-             'east' = None,
-             'west' = None,
-             'northeast' = None,
-             'southeast' = None,
-             'northwest' = None,
-             'southwest' = None,
-             'up' = None,
-             'down' = None,
-             'n' = exits['north'],
-             's' = exits['south'],
-             'e' = exits['east'],
-             'w' = exits['west'],
-             'ne' = exits['northeast'],
-             'se' = exits['southeast'],
-             'nw' = exits['northwest'],
-             'sw' = exits['southwest'],
-             'u' = exits['up'],
-             'd' = exits['down']
+             'north' : None,
+             'south' : None,
+             'east' : None,
+             'west' : None,
+             'northeast' : None,
+             'southeast' : None,
+             'northwest' : None,
+             'southwest' : None,
+             'up' : None,
+             'down' : None,
+             'n' : exits['north'],
+             's' : exits['south'],
+             'e' : exits['east'],
+             'w' : exits['west'],
+             'ne' : exits['northeast'],
+             'se' : exits['southeast'],
+             'nw' : exits['northwest'],
+             'sw' : exits['southwest'],
+             'u' : exits['up'],
+             'd' : exits['down']
             }
 
 class thing:
@@ -71,4 +72,4 @@ def runGame():
 
 def roomDescription():
 
-    return "", player.location['room'].name, "\n\n", player.location['room'].description, "\n\n", "You see", player.location['room'].contains, "." 
+    return "", player.location['room'].name, "\n\n", player.location['room'].description, "\n\n", "You see ", player.location['room'].contains, "."
