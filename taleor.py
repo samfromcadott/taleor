@@ -67,6 +67,11 @@ class thing:
     sceanery = False
     weildable = False
     contains = [None]
+    location = {
+                'room' : room,
+                'x' : 0, # 'x' and 'y' will be used in absolute and semi-absolute mode. It represents the location of the thing in the world or room respectivly.
+                'y' : 0
+               }
 
 def runGame():
     pass
