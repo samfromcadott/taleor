@@ -6,20 +6,6 @@ tense = 'present' # Could also be 'past' or 'future'
 person = 'second' # Can also be 'first' or 'third'
 
 
-class actor:
-
-    name = "Generic Actor"
-    alt_name = [None]
-    player = False
-    description = "This actor is generic"
-    gender = "none" # Can also be "male", "female", or "neutral"
-    inventory = [None]
-    location = {
-                'room' : room,
-                'x' : 0, # 'x' and 'y' will be used in absolute and semi-absolute mode. It represents the location of the actor in the world or room respectivly.
-                'y' : 0
-               }
-
 class room:
 
     name = "Generic Room"
@@ -52,6 +38,21 @@ class room:
              'u' : exits['up'],
              'd' : exits['down']
             }
+
+
+class actor:
+
+    name = "Generic Actor"
+    alt_name = [None]
+    player = False
+    description = "This actor is generic"
+    gender = "none" # Can also be "male", "female", or "neutral"
+    inventory = [None]
+    location = {
+                'room' : room,
+                'x' : 0, # 'x' and 'y' will be used in absolute and semi-absolute mode. It represents the location of the actor in the world or room respectivly.
+                'y' : 0
+               }
 
 class thing:
 
