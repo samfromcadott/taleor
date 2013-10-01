@@ -3,7 +3,21 @@
 
 world_mode = 'realative' # Could also be 'absolute' or 'semi-absolute'
 tense = 'present' # Could also be 'past' or 'future'
-person = 'second' # Can also be 
+person = 'second' # Can also be 'first' or 'third'
+
+
+#BEGIN PLAYER CHARACTER DEFINITION BLOCK
+
+player = actor #This object will always be used as the player character
+#The writer changes the attributes to fit their character
+
+player.name = "AFGNCAAP"
+player.description = "You look like yourself."
+player.gender = 'neutral'
+
+#END PLAYER CHARACTER DEFINITION BLOCK
+
+
 
 tense_forms = { # Contains forms for tense and perspective for messages.
 
@@ -36,7 +50,7 @@ class actor:
     alt_name = [None]
     player = False
     description = "This actor is generic"
-    gender = "none" # Can also be "male", "female", or "neuter"
+    gender = "none" # Can also be "male", "female", or "neutral"
     inventory = [None]
     location = {
                 'room' : room,
