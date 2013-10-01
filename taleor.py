@@ -6,44 +6,6 @@ tense = 'present' # Could also be 'past' or 'future'
 person = 'second' # Can also be 'first' or 'third'
 
 
-#BEGIN PLAYER CHARACTER DEFINITION BLOCK
-
-player = actor #This object will always be used as the player character
-#The writer changes the attributes to fit their character
-
-player.name = "AFGNCAAP"
-player.description = "You look like yourself."
-player.gender = 'neutral'
-
-#END PLAYER CHARACTER DEFINITION BLOCK
-
-
-
-tense_forms = { # Contains forms for tense and perspective for messages.
-
-               'first' : {
-                          'subject' : 'I',
-                          'past' : 'saw',
-                          'present' : 'see',
-                          'future' : 'will see',
-                         },
-
-               'second' : {
-                           'subject' : 'You',
-                           'past' : 'saw',
-                           'present' : 'see',
-                           'future' : 'will see',
-                          },
-
-               'third' : {
-                          'subject' : player.name,
-                          'past' : 'saw',
-                          'present' : 'sees',
-                          'future' : 'will see',
-                         }
-              }
-
-
 class actor:
 
     name = "Generic Actor"
@@ -111,3 +73,42 @@ def runGame():
 def roomDescription():
 
     return "", player.location['room'].name, "\n\n", player.location['room'].description, "\n\n", "You see ", player.location['room'].contains, "."
+
+
+
+#BEGIN PLAYER CHARACTER DEFINITION BLOCK
+
+player = actor #This object will always be used as the player character
+#The writer changes the attributes to fit their character
+
+player.name = "AFGNCAAP"
+player.description = "You look like yourself."
+player.gender = 'neutral'
+
+#END PLAYER CHARACTER DEFINITION BLOCK
+
+
+
+tense_forms = { # Contains forms for tense and perspective for messages.
+
+               'first' : {
+                          'subject' : 'I',
+                          'past' : 'saw',
+                          'present' : 'see',
+                          'future' : 'will see',
+                         },
+
+               'second' : {
+                           'subject' : 'You',
+                           'past' : 'saw',
+                           'present' : 'see',
+                           'future' : 'will see',
+                          },
+
+               'third' : {
+                          'subject' : player.name,
+                          'past' : 'saw',
+                          'present' : 'sees',
+                          'future' : 'will see',
+                         }
+              }
