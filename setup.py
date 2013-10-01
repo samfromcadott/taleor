@@ -7,5 +7,5 @@ setup(name = 'taleor',
       description = 'Interactive fiction Library',
       author = 'Sam Jackson',
       url = 'https://github.com/samgj/taleor',
-      py_modules = ['tale-or']
+      py_modules = ['taleor']
      )
