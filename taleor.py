@@ -27,16 +27,16 @@ class room:
              'southwest' : None,
              'up' : None,
              'down' : None,
-             'n' : exits['north'],
-             's' : exits['south'],
-             'e' : exits['east'],
-             'w' : exits['west'],
-             'ne' : exits['northeast'],
-             'se' : exits['southeast'],
-             'nw' : exits['northwest'],
-             'sw' : exits['southwest'],
-             'u' : exits['up'],
-             'd' : exits['down']
+             'n' : 'north',
+             's' : 'south',
+             'e' : 'east',
+             'w' : 'west',
+             'ne' : 'northeast',
+             'se' : 'southeast',
+             'nw' : 'northwest',
+             'sw' : 'southwest',
+             'u' : 'up',
+             'd' : 'down'
             }
 
 
